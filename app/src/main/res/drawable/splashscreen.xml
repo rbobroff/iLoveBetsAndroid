@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@drawable/splashscreen_android"/>
+    <item android:drawable="@drawable/background_android"/>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/splash_logo_android"
+            />
+
+    </item>
+
 
 </layer-list>
