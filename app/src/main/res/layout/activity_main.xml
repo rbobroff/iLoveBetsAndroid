@@ -8,6 +8,18 @@
     tools:context=".MainActivity">
     <!-- android:background="@drawable/background_android" -->
 
+    <ImageButton
+        android:id="@+id/imageStatisticsButton"
+        android:layout_width="235dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/statisticsbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="93dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,3 +31,66 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!---
+пример кода tablelayout
+
+<TableLayout
+android:gravity="center"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
+
+<TableRow
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="235dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/subscriptionbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="235dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/bettingtipsbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+</TableRow>
+
+
+<TableRow
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="235dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/subscriptionbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="235dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/bettingtipsbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+</TableRow>
+
+
+</TableLayout>
+
+-->
