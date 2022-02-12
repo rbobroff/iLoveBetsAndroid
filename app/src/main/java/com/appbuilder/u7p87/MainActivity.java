@@ -4,6 +4,8 @@ package com.appbuilder.u7p87;
 //2. Экран загрузки приложения: 1) https://www.youtube.com/watch?v=Zlo3qpkZ1aI&t=257s 2) Или Урок 5 - geekbrains. Android 1. 1ч 29 мин 13 с
 //3. Кнопка назад и переход на новый активити: https://www.youtube.com/watch?v=bli1mLIjhHw
 //4. Фон для ActionBar: http://android-er.blogspot.com/2015/04/set-icon-and-background-of-actionbar.html
+//5. //Cosntraints: 1) https://www.youtube.com/watch?v=jz5YPZr0A6E&list=PLH3y3SWteZd2RlWYNjzix14WFkTMvVW0A&index=18
+     //             2) http://developer.alexanderklimov.ru/android/layout/relativelayout.php
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Переход на новую Activity для тестирования кнопки назад
     public void transitionActivity2() {
-        imageStatisticsButton = findViewById(R.id.imageStatisticsButton);
+        imageStatisticsButton = findViewById(R.id.statisticsImageButton2);
         imageStatisticsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, StatisticsActivity.class));

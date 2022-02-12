@@ -3,14 +3,9 @@ package com.appbuilder.u7p87;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-
-import java.util.Locale;
 
 public class StatisticsActivity extends AppCompatActivity {
 
@@ -37,7 +32,7 @@ public class StatisticsActivity extends AppCompatActivity {
         //фон для ActionBar
         Drawable drawable;
         Resources resources = getResources();
-        drawable = resources.getDrawable(R.drawable.background_android);
+        drawable = resources.getDrawable(R.drawable.background);
         actionBar.setBackgroundDrawable(drawable);
     }
 

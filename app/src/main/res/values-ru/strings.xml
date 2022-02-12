@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="app_name">iLoveBets</string>
+    <string name="your_personal_sports_label">Ваш персональный помощник в</string>
+    <string name="betting_advisor_label">мире спортивного беттинга</string>
+    <string name="ilovebets_label">iLoveBets</string>
+    <string name="sports_betting_tips_label">Спортивные прогнозы</string>
+
+
 </resources>

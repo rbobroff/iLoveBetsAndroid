@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">iLoveBets</string>
+    <string name="your_personal_sports_label">Your Personal Sports</string>
+    <string name="betting_advisor_label">Betting Advisor</string>
+    <string name="ilovebets_label">iLoveBets</string>
+    <string name="sports_betting_tips_label">Sports Betting Tips</string>
+
 </resources>
