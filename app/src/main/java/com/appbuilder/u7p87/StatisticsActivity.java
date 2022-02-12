@@ -25,7 +25,7 @@ public class StatisticsActivity extends AppCompatActivity {
     public void statisticsActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.show();
-        actionBar.setTitle("Statistics");
+        actionBar.setTitle(R.string.statistics_action_bar);
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 

@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     ImageButton imageStatisticsButton;
+    ImageButton imageBettingTipsButton;
+    ImageButton imageHelpButton;
 
 
     @Override
@@ -37,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         languageSettings();
         densityName();
         densityScreenParameters();
-        transitionActivity2();
+        bettingTipsTransitionActivity();
+        statisticsTransitionActivity();
+        helpTransitionActivity();
 
 
     } //конец метода onCreate
@@ -91,8 +95,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Переход на новую Activity для тестирования кнопки назад
-    public void transitionActivity2() {
+    //Переход на экран BettingTips
+    public void bettingTipsTransitionActivity() {
+        imageBettingTipsButton = findViewById(R.id.bettingTipsImageButton1);
+        imageBettingTipsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BettingTipsActivity.class));
+            }
+        });
+    }
+
+
+    //Переход на экран StatisticsActivity
+    public void statisticsTransitionActivity(){
         imageStatisticsButton = findViewById(R.id.statisticsImageButton2);
         imageStatisticsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -101,7 +116,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    //Переход на экран helpActivity
+    public void helpTransitionActivity(){
+        imageHelpButton = findViewById(R.id.helpImageButton3);
+        imageHelpButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, HelpActivity.class));
+            }
+        });
+    }
 
 
 
