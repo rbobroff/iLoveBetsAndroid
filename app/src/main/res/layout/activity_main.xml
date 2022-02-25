@@ -70,35 +70,39 @@
 
     <ImageButton
         android:id="@+id/bettingTipsImageButton1"
-        android:layout_width="153dp"
-        android:layout_height="129dp"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
         android:background="@drawable/bettingtipsbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
         android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
         android:layout_marginEnd="1dp"
-        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/ilovebets_label_textView3"
         android:contentDescription="bettingTipsButtonContentDescription"
         tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/statisticsImageButton2"
-        android:layout_width="153dp"
-        android:layout_height="129dp"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
         android:background="@drawable/statisticsbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
         android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
         android:layout_marginStart="1dp"
-        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/ilovebets_label_textView3"
         android:contentDescription="StatisticsButtonContentDescription"
         tools:ignore="HardcodedText" />
 
 
     <ImageButton
         android:id="@+id/helpImageButton3"
-        android:layout_width="153dp"
-        android:layout_height="129dp"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
         android:background="@drawable/helpbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
@@ -107,14 +111,15 @@
         android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
         android:layout_marginEnd="1dp"
         android:layout_marginTop="2dp"
+        android:layout_marginStart="20dp"
         android:gravity="center_horizontal"
         android:contentDescription="helpButtonContentDescription"
         tools:ignore="HardcodedText"/>
 
     <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="153dp"
-        android:layout_height="129dp"
+        android:id="@+id/emailImageButton4"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
         android:background="@drawable/emailbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
@@ -122,10 +127,44 @@
         android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
         android:layout_centerVertical="true"
         android:contentDescription="emailButtonContentDescription"
         tools:ignore="HardcodedText" />
 
+
+    <ImageButton
+        android:id="@+id/chatImageButton5"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:background="@drawable/chatbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/helpImageButton3"
+        android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_horizontal"
+        android:contentDescription="helpButtonContentDescription"
+        tools:ignore="HardcodedText"/>
+
+    <ImageButton
+        android:id="@+id/aboutUsImageButton6"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:background="@drawable/aboutusbtn"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        android:layout_below="@id/emailImageButton4"
+        android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="emailButtonContentDescription"
+        tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

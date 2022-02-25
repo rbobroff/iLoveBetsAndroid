@@ -16,10 +16,10 @@
         android:layout_height="wrap_content"
         android:text="@string/your_personal_sports_label"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="14sp"
         android:gravity="center_horizontal"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/betting_advisor_labeltext_View2"
@@ -27,10 +27,10 @@
         android:layout_height="wrap_content"
         android:text="@string/betting_advisor_label"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="14sp"
         android:layout_below="@id/your_personal_sports_label_textView1"
         android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="1dp"/>
 
 
     <TextView
@@ -39,10 +39,10 @@
         android:layout_height="wrap_content"
         android:text="@string/ilovebets_label"
         android:textColor="@color/white"
-        android:textSize="44sp"
+        android:textSize="30sp"
         android:layout_below="@id/betting_advisor_labeltext_View2"
         android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="3dp"/>
 
 
     <TextView
@@ -52,9 +52,9 @@
         android:text="@string/sports_betting_tips_label"
         android:layout_alignParentBottom="true"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="14sp"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="5dp"/>
 
 
 
@@ -70,30 +70,30 @@
 
     <ImageButton
         android:id="@+id/bettingTipsImageButton1"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
         android:background="@drawable/bettingtipsbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
         android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
         android:layout_marginEnd="1dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/ilovebets_label_textView3"
         android:contentDescription="bettingTipsButtonContentDescription"
         tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/statisticsImageButton2"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
         android:background="@drawable/statisticsbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
         android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/ilovebets_label_textView3"
         android:contentDescription="StatisticsButtonContentDescription"
         tools:ignore="HardcodedText" />
@@ -101,8 +101,8 @@
 
     <ImageButton
         android:id="@+id/helpImageButton3"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
         android:background="@drawable/helpbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
@@ -118,8 +118,8 @@
 
     <ImageButton
         android:id="@+id/emailImageButton4"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
         android:background="@drawable/emailbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
@@ -135,8 +135,8 @@
 
     <ImageButton
         android:id="@+id/chatImageButton5"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
         android:background="@drawable/chatbtn"
         android:scaleType="centerInside"
         android:visibility="visible"
@@ -152,8 +152,8 @@
 
     <ImageButton
         android:id="@+id/aboutUsImageButton6"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
         android:background="@drawable/aboutusbtn"
         android:scaleType="centerInside"
         android:visibility="visible"

@@ -6,15 +6,26 @@ package com.appbuilder.u7p87;
 //4. Фон для ActionBar: http://android-er.blogspot.com/2015/04/set-icon-and-background-of-actionbar.html
 //5. //Cosntraints: 1) https://www.youtube.com/watch?v=jz5YPZr0A6E&list=PLH3y3SWteZd2RlWYNjzix14WFkTMvVW0A&index=18
      //             2) http://developer.alexanderklimov.ru/android/layout/relativelayout.php
+//6. Размеры экранов (small, normal, large, xlarge)
+// Small - 2.7 QVGA (320 x 427 dp, ldpi)
+// Normal - Pixel (411 x 731 dp, 420 dpi)
+// Large - 7 inch, Nexus 7 (600 x 960 dp, xhdp)
+//40 sp - в 2 раза больше
+// xLarge - 9, 10 inch, Nexus 10 (1280 x 800 dp, xhdp) или Pixel C (1280 x 900 dp, xhdp)
+
+
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -34,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
         hideActionBar();
         languageSettings();
         densityName();
@@ -42,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         bettingTipsTransitionActivity();
         statisticsTransitionActivity();
         helpTransitionActivity();
+        hideSportsBettingTipsLabel();
 
 
     } //конец метода onCreate
@@ -53,20 +64,20 @@ public class MainActivity extends AppCompatActivity {
         if (density >= 4.0) {
             Log.d("Имя плотности экрана:", "xxxhdpi");
         }
-        if (density >=  3.0 && density < 4.0) {
+        if (density >= 3.0 && density < 4.0) {
             Log.d("Имя плотности экрана:", "xxhdpi");
         }
-        if (density >=  2.0 && density < 3.0) {
+        if (density >= 2.0 && density < 3.0) {
             Log.d("Имя плотности экрана:", "xhdpi");
         }
-        if (density >=  1.5 && density < 2.0) {
+        if (density >= 1.5 && density < 2.0) {
             Log.d("Имя плотности экрана:", "hdpi");
         }
-        if (density >=  1.0 && density < 1.5) {
+        if (density >= 1.0 && density < 1.5) {
 
             Log.d("Имя плотности экрана:", "mdpi");
         }
-        if (density <  1.0) {
+        if (density < 1.0) {
             Log.d("Имя плотности экрана:", "ldpi - 0.75");
         }
     } //конец метода densityNameMethod
@@ -81,6 +92,29 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Высота px", String.valueOf(getResources().getDisplayMetrics().heightPixels));
         Log.d("Все параметры экрана", String.valueOf(getResources().getDisplayMetrics()));
     }
+
+
+    //Скрыть нижнюю надпись для небольших телефонов
+    public void hideSportsBettingTipsLabel() {
+        TextView sportsBettingTipsLabel = findViewById(R.id.sports_betting_tips_label_textView4);
+        Float phoneHeightPX;
+        Float phoneHeightDP;
+        Float PxToDp;
+        phoneHeightPX = Float.valueOf(getResources().getDisplayMetrics().heightPixels);
+        phoneHeightDP = Float.valueOf(getResources().getDisplayMetrics().density);
+        System.out.println("Проверка высоты PX для метода = " + phoneHeightPX);
+        System.out.println("Проверка dp для метода = " + phoneHeightDP);
+        PxToDp = phoneHeightPX / phoneHeightDP;
+        System.out.println("Деление PxToDp = " + PxToDp);
+        if (PxToDp < 710)
+        {
+            //sportsBettingTipsLabel.setText("Lf");
+           sportsBettingTipsLabel.setVisibility(View.INVISIBLE);
+        } //конец условия
+
+    } //конец метода скрыть нижний label
+
+
 
     //Вывод языка телефона
     public void languageSettings() {

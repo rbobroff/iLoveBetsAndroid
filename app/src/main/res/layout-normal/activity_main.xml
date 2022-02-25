@@ -3,60 +3,59 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayoutID"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/your_personal_sports_label_textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:text="@string/your_personal_sports_label"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        android:gravity="center_horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"/>
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/betting_advisor_labeltext_View2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/your_personal_sports_label_textView1"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
         android:text="@string/betting_advisor_label"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        android:layout_below="@id/your_personal_sports_label_textView1"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
+        android:textSize="24sp" />
 
 
     <TextView
         android:id="@+id/ilovebets_label_textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/betting_advisor_labeltext_View2"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
         android:text="@string/ilovebets_label"
         android:textColor="@color/white"
-        android:textSize="44sp"
-        android:layout_below="@id/betting_advisor_labeltext_View2"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
+        android:textSize="54sp" />
 
 
     <TextView
         android:id="@+id/sports_betting_tips_label_textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sports_betting_tips_label"
         android:layout_alignParentBottom="true"
-        android:textColor="@color/white"
-        android:textSize="24sp"
+        android:layout_marginBottom="8dp"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="10dp"/>
-
-
+        android:text="@string/sports_betting_tips_label"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
 
     <TextView
@@ -64,106 +63,105 @@
         android:layout_width="0dp"
         android:layout_height="129dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:layout_centerVertical="true" />
 
 
     <ImageButton
         android:id="@+id/bettingTipsImageButton1"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_height="146dp"
+        android:layout_below="@id/ilovebets_label_textView3"
+        android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="1dp"
         android:background="@drawable/bettingtipsbtn"
+        android:contentDescription="bettingTipsButtonContentDescription"
         android:scaleType="centerInside"
         android:visibility="visible"
-        android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/ilovebets_label_textView3"
-        android:contentDescription="bettingTipsButtonContentDescription"
         tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/statisticsImageButton2"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:background="@drawable/statisticsbtn"
-        android:scaleType="centerInside"
-        android:visibility="visible"
+        android:layout_height="146dp"
+        android:layout_below="@id/ilovebets_label_textView3"
         android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
         android:layout_marginStart="1dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
-        android:layout_below="@id/ilovebets_label_textView3"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/statisticsbtn"
         android:contentDescription="StatisticsButtonContentDescription"
+        android:scaleType="centerInside"
+        android:visibility="visible"
         tools:ignore="HardcodedText" />
 
 
     <ImageButton
         android:id="@+id/helpImageButton3"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:background="@drawable/helpbtn"
-        android:scaleType="centerInside"
-        android:visibility="visible"
-        android:layout_centerVertical="true"
+        android:layout_height="146dp"
         android:layout_below="@id/bettingTipsImageButton1"
         android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
-        android:layout_marginEnd="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="2dp"
-        android:layout_marginStart="20dp"
-        android:gravity="center_horizontal"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/helpbtn"
         android:contentDescription="helpButtonContentDescription"
-        tools:ignore="HardcodedText"/>
+        android:gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/emailImageButton4"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:background="@drawable/emailbtn"
-        android:scaleType="centerInside"
-        android:visibility="visible"
+        android:layout_height="146dp"
         android:layout_below="@id/statisticsImageButton2"
         android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
+        android:layout_centerVertical="true"
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="20dp"
-        android:layout_centerVertical="true"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/emailbtn"
         android:contentDescription="emailButtonContentDescription"
+        android:scaleType="centerInside"
+        android:visibility="visible"
         tools:ignore="HardcodedText" />
 
 
     <ImageButton
         android:id="@+id/chatImageButton5"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:background="@drawable/chatbtn"
-        android:scaleType="centerInside"
-        android:visibility="visible"
-        android:layout_centerVertical="true"
+        android:layout_height="146dp"
         android:layout_below="@id/helpImageButton3"
         android:layout_alignEnd="@id/centerTextViewForButtonsConstraints"
-        android:layout_marginEnd="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="2dp"
-        android:layout_marginStart="20dp"
-        android:gravity="center_horizontal"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/chatbtn"
         android:contentDescription="helpButtonContentDescription"
-        tools:ignore="HardcodedText"/>
+        android:gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/aboutUsImageButton6"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:background="@drawable/aboutusbtn"
-        android:scaleType="centerInside"
-        android:visibility="visible"
+        android:layout_height="146dp"
         android:layout_below="@id/emailImageButton4"
         android:layout_alignStart="@id/centerTextViewForButtonsConstraints"
+        android:layout_centerVertical="true"
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="20dp"
-        android:layout_centerVertical="true"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/aboutusbtn"
         android:contentDescription="emailButtonContentDescription"
+        android:scaleType="centerInside"
+        android:visibility="visible"
         tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
