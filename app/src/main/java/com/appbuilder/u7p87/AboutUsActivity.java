@@ -1,7 +1,10 @@
 package com.appbuilder.u7p87;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 public class AboutUsActivity extends AppCompatActivity {
@@ -10,5 +13,28 @@ public class AboutUsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
+
+
+
+        aboutUsActionBar();
+
+    } //конец метода onCreate
+
+
+
+    //Показать ActionBar и кнопку назад
+    public void aboutUsActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.show();
+        actionBar.setTitle(R.string.about_us_action_bar);
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        //фон для ActionBar
+        Drawable drawable;
+        Resources resources = getResources();
+        drawable = resources.getDrawable(R.drawable.background);
+        actionBar.setBackgroundDrawable(drawable);
     }
-}
+
+} //конец класса

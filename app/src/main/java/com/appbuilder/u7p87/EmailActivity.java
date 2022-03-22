@@ -15,7 +15,6 @@ public class EmailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_email);
 
 
-
         emailActionBar();
 
     } //конец метода onCreate

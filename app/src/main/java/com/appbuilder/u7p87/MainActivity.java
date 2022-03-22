@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton imageBettingTipsButton;
     ImageButton imageHelpButton;
     ImageButton imageEmailButton;
+    ImageButton imageAboutUsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         statisticsTransitionActivity();
         helpTransitionActivity();
         emailTransitionActivity();
+        aboutUsTransitionActivity();
         hideSportsBettingTipsLabel();
 
 
@@ -167,6 +169,16 @@ public class MainActivity extends AppCompatActivity {
         imageEmailButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, EmailActivity.class));
+            }
+        });
+    }
+
+    //Переход на экран AboutUsActivity
+    public void aboutUsTransitionActivity(){
+        imageAboutUsButton = findViewById(R.id.aboutUsImageButton6);
+        imageAboutUsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
             }
         });
     }
