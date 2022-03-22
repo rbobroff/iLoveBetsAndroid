@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton imageStatisticsButton;
     ImageButton imageBettingTipsButton;
     ImageButton imageHelpButton;
-
+    ImageButton imageEmailButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         bettingTipsTransitionActivity();
         statisticsTransitionActivity();
         helpTransitionActivity();
+        emailTransitionActivity();
         hideSportsBettingTipsLabel();
 
 
@@ -150,12 +151,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //Переход на экран helpActivity
+    //Переход на экран HelpActivity
     public void helpTransitionActivity(){
         imageHelpButton = findViewById(R.id.helpImageButton3);
         imageHelpButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, HelpActivity.class));
+            }
+        });
+    }
+
+    //Переход на экран EmailActivity
+    public void emailTransitionActivity(){
+        imageEmailButton = findViewById(R.id.emailImageButton4);
+        imageEmailButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, EmailActivity.class));
             }
         });
     }

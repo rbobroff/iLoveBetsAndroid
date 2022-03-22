@@ -7,6 +7,7 @@
     <string name="ilovebets_label">iLoveBets</string>
     <string name="sports_betting_tips_label">Спортивные прогнозы</string>
     <string name="statistics_action_bar">#Статистика</string>
+    <string name="email_action_bar">#E-Mail</string>
     <string name="betting_tips_action_bar">#Прогнозы</string>
     <string name="help_action_bar">#Справка</string>
 
