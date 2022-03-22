@@ -30,7 +30,7 @@ public class StatisticsActivity extends AppCompatActivity {
         System.out.println("Язык статистики: " + localization);
 
         //инициализируем переменную
-        web = (WebView)findViewById(R.id.webView);
+        web = (WebView)findViewById(R.id.webViewStat);
         //создаем переменную с настройками
         WebSettings ws = web.getSettings();
         ws.setJavaScriptEnabled(true);
