@@ -7,6 +7,7 @@
     <string name="statistics_action_bar">#Statistics</string>
     <string name="email_action_bar">#E-Mail</string>
     <string name="about_us_action_bar">#About Us</string>
+    <string name="chat_action_bar">#Chat</string>
     <string name="betting_tips_action_bar">#BettingTips</string>
     <string name="help_action_bar">#Help</string>
 

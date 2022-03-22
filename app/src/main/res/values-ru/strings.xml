@@ -9,6 +9,7 @@
     <string name="statistics_action_bar">#Статистика</string>
     <string name="email_action_bar">#E-Mail</string>
     <string name="about_us_action_bar">#О Нас</string>
+    <string name="chat_action_bar">#Чат</string>
     <string name="betting_tips_action_bar">#Прогнозы</string>
     <string name="help_action_bar">#Справка</string>
 
