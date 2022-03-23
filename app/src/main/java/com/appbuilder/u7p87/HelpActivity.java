@@ -26,7 +26,7 @@ public class HelpActivity extends AppCompatActivity {
         //узнаем язык телефона
 
         localization = Locale.getDefault().getLanguage();
-        System.out.println("Язык статистики: " + localization);
+        System.out.println("Язык Help раздела: " + localization);
 
         //инициализируем переменную
         web = (WebView)findViewById(R.id.webViewHelp);
