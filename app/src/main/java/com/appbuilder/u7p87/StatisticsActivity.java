@@ -2,6 +2,7 @@ package com.appbuilder.u7p87;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -26,6 +27,9 @@ public class StatisticsActivity extends AppCompatActivity {
     boolean redirect = false;
     boolean completely_loaded = true;
 
+    //для swipe Refresh webVIew
+    SwipeRefreshLayout swipeRefreshLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,18 @@ public class StatisticsActivity extends AppCompatActivity {
         //инициализируем переменную
         web = (WebView)findViewById(R.id.webViewStat);
         //создаем переменную с настройками
+
+        //для swipe Refresh layout
+        swipeRefreshLayout = findViewById(R.id.reload);
+        // возможно надо в другом месте писать код
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                web.reload();
+            }
+        });
+
+
         WebSettings ws = web.getSettings();
         ws.setJavaScriptEnabled(true);
         //чтобы ссылки открывались внутри приложения
@@ -68,11 +84,16 @@ public class StatisticsActivity extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+
+                //после того, как страница обновилась, убрать spinner от swipe to refresh
+                swipeRefreshLayout.setRefreshing(false);
+
                 if(!redirect){
                     completely_loaded = true;
                 }
                 if(completely_loaded && !redirect) {
                     // ==============page is completely Loaded ======== - можно добавить ProgressBar - точнее скрыть здесь
+
                     //Toast toast = Toast.makeText(StatisticsActivity.this, "Веб страница загружена", Toast.LENGTH_LONG);
                     //toast.show();
 
@@ -85,7 +106,7 @@ public class StatisticsActivity extends AppCompatActivity {
                 }
             }
 
-            //если страница не загрузилась, показать это. Надо показать какое-то сообщение или заменить на статичный webView
+            //если страница не загрузилась, показать это. Надо показать какое-то сообщение или заменить на статичный webView "index.html"
             @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 super.onReceivedError(view, errorCode, description, failingUrl);
@@ -103,7 +124,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
 
 
-        //выравнивание по ширине экрана мобильного устройства
+        //выравнивание по ширине экрана мобильного устройства - =======!!!!!!!Возможно это надо перед строкой - web.setWebViewClient(new WebViewClient());
         ws.setUseWideViewPort(true);
         ws.setLoadWithOverviewMode(true);
         if (localization == "ru")
