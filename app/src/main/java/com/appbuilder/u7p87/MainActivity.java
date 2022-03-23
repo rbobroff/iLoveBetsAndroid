@@ -12,7 +12,8 @@ package com.appbuilder.u7p87;
 // Large - 7 inch, Nexus 7 (600 x 960 dp, xhdp)
 //40 sp - в 2 раза больше
 // xLarge - 9, 10 inch, Nexus 10 (1280 x 800 dp, xhdp) или Pixel C (1280 x 900 dp, xhdp)
-
+//7. Основной webView: https://www.youtube.com/watch?app=desktop&v=g4-ZqnxGFgw&list=PL0lO_mIqDDFW13-lP3IgK9lZoM1M-oPl4&index=17&huid=SqmOks30oom8ReVkyp690A
+//8. web
 
 
 import androidx.appcompat.app.ActionBar;
