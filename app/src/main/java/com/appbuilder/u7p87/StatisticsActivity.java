@@ -50,7 +50,8 @@ public class StatisticsActivity extends AppCompatActivity {
         // возможно надо в другом месте писать код
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onRefresh() {
+            public void onRefresh()
+            {
                 web.reload();
             }
         });
@@ -59,7 +60,7 @@ public class StatisticsActivity extends AppCompatActivity {
         WebSettings ws = web.getSettings();
         ws.setJavaScriptEnabled(true);
         //чтобы ссылки открывались внутри приложения
-       // web.setWebViewClient(new WebViewClient());
+        // web.setWebViewClient(new WebViewClient());
 
         web.setWebViewClient(new WebViewClient(){
 
@@ -106,15 +107,17 @@ public class StatisticsActivity extends AppCompatActivity {
                 }
             }
 
+
             //если страница не загрузилась, показать это. Надо показать какое-то сообщение или заменить на статичный webView "index.html"
             @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 super.onReceivedError(view, errorCode, description, failingUrl);
-                                         //logic
+                //logic
                 Toast toast = Toast.makeText(StatisticsActivity.this, "Веб страница НЕ загружена", Toast.LENGTH_LONG);
                 toast.show();
 
                 web.loadUrl("file:///android_asset/index.html");
+
             }
 
 
@@ -140,14 +143,32 @@ public class StatisticsActivity extends AppCompatActivity {
     } //конец метода onCreate
 
 
-    //чтобы была возможность переходить назад при нажатии кнопки назад в браузере
     @Override
+    protected void onResume(){
+        super.onResume();
+
+        reloadWebView();
+    }
+
+
+/*
+    @Override
+    protected void onPause(){
+        super.onPause();
+        reloadWebView();
+    }
+/*
+    //чтобы была возможность переходить назад при нажатии кнопки назад в браузере
+      @Override
     public void onBackPressed() {
         if (web.canGoBack())
             web.goBack();
         else
             super.onBackPressed();
     }
+   */
+
+
 
     //Показать ActionBar и кнопку назад
     public void statisticsActionBar() {
@@ -162,6 +183,13 @@ public class StatisticsActivity extends AppCompatActivity {
         Resources resources = getResources();
         drawable = resources.getDrawable(R.drawable.background);
         actionBar.setBackgroundDrawable(drawable);
+    }
+
+
+    //метод обновления страницы
+    public void reloadWebView()
+    {
+        web.reload();
     }
 
 

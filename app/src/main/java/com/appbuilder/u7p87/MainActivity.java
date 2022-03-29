@@ -15,6 +15,9 @@ package com.appbuilder.u7p87;
 //7. Основной webView: https://www.youtube.com/watch?app=desktop&v=g4-ZqnxGFgw&list=PL0lO_mIqDDFW13-lP3IgK9lZoM1M-oPl4&index=17&huid=SqmOks30oom8ReVkyp690A
 //8. Проверка, что webView загрузился на 100%: https://www.youtube.com/watch?v=ETHj0ZzdRh8
 //9. Pull to refresh webView: https://www.youtube.com/watch?v=qfDiDmM1014
+//9.1 Pull to refresh webView. Как правильно выстроить constraints, чтобы при прокрутке вверх содержимого окна не происходил refresh
+//https://www.youtube.com/watch?v=kuzXdK3AKTs
+
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
