@@ -3,7 +3,6 @@ package com.appbuilder.u7p87;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -46,13 +45,28 @@ public class StatisticsActivity extends AppCompatActivity {
         //создаем переменную с настройками
 
         //для swipe Refresh layout
-        swipeRefreshLayout = findViewById(R.id.reload);
+        swipeRefreshLayout = findViewById(R.id.reload_stat_swiperefreshlayout);
         // возможно надо в другом месте писать код
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh()
+
             {
-                web.reload();
+                //web.reload(); - убрал, тк когда оффлайн переходит на оффлайн страницу и при появлении интернета он пытается обновить эту оффлайн страницу
+                //проверить этот код на странице офлайн, вместо web.reload
+
+
+                //проверить код на устройстве, будет ли после включения интернета сбъезжать страница
+                /*if (localization == "ru")
+                {
+                web.loadUrl("https://ilovebets.ru/mobileapp/ios/statisticsrus/");
+                } else {
+                web.loadUrl("https://ilovebets.ru/mobileapp/ios/statisticseng/");
+                }*/
+
+                //web.loadUrl("https://ilovebets.ru/mobileapp/ios/statisticseng/");
+
+                reloadWebView();
             }
         });
 
@@ -127,7 +141,8 @@ public class StatisticsActivity extends AppCompatActivity {
 
 
 
-        //выравнивание по ширине экрана мобильного устройства - =======!!!!!!!Возможно это надо перед строкой - web.setWebViewClient(new WebViewClient());
+        //выравнивание по ширине экрана мобильного устройства - =======!!!!!!!Возможно это надо перед строкой
+        // web.setWebViewClient(new WebViewClient());
         ws.setUseWideViewPort(true);
         ws.setLoadWithOverviewMode(true);
         if (localization == "ru")
@@ -146,7 +161,6 @@ public class StatisticsActivity extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-
         reloadWebView();
     }
 

@@ -8,17 +8,16 @@
 
 
 
-    <LinearLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/reload_about_us_swiperefreshlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <WebView
             android:id="@+id/webViewAboutUs"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-    </LinearLayout>
 
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
