@@ -23,6 +23,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -58,10 +60,28 @@ public class MainActivity extends AppCompatActivity {
         bettingTipsTransitionActivity();
         statisticsTransitionActivity();
         helpTransitionActivity();
-        emailTransitionActivity();
+        //emailTransitionActivity();
         aboutUsTransitionActivity();
         chatTransitionActivity();
         hideSportsBettingTipsLabel();
+
+
+
+        //Запус email клиента приложения для написания письма и проверка, что установлено приложение
+        imageEmailButton = findViewById(R.id.emailImageButton4);
+        imageEmailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO,
+                        Uri.fromParts("mailto", "ilovebets@ya.ru", null));
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(Intent.createChooser(intent, "Email - iLoveBets.App"));
+                } else {
+                    Toast.makeText(MainActivity.this, "There is no application that support this action", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
 
     } //конец метода onCreate
@@ -169,15 +189,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
     //Переход на экран EmailActivity
-    public void emailTransitionActivity(){
+    /*public void emailTransitionActivity(){
         imageEmailButton = findViewById(R.id.emailImageButton4);
         imageEmailButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, EmailActivity.class));
             }
         });
-    }
+    }*/
+
+
 
     //Переход на экран AboutUsActivity
     public void aboutUsTransitionActivity(){
