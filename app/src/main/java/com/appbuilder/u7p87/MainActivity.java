@@ -17,7 +17,24 @@ package com.appbuilder.u7p87;
 //9. Pull to refresh webView: https://www.youtube.com/watch?v=qfDiDmM1014
 //9.1 Pull to refresh webView. Как правильно выстроить constraints, чтобы при прокрутке вверх содержимого окна не происходил refresh
 //https://www.youtube.com/watch?v=kuzXdK3AKTs
+//10 E-Mail:https://www.youtube.com/watch?v=GOqv3jnw_Go
+/*starting with API level 30
+        <!--это необходимо, чтобы правильно срабатывало условие для выбора приложения при нажатии Email-->
+        <queries>
+        <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="mailto" />
+        </intent>
+        </queries>
+*/
+// 12. Push notification
+    //https://www.youtube.com/watch?v=m8vUFO5mFIM
+    //Doesn't show #signing report in gradle bar for google firebase:
+    //https://www.youtube.com/watch?v=Ah1wX26lmxY
 
+//13. json
+//https://www.youtube.com/watch?v=yU1zHRXBGSE
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
