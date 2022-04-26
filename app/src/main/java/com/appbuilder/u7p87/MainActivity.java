@@ -28,7 +28,7 @@ package com.appbuilder.u7p87;
         </intent>
         </queries>
 */
-// 12. Push notification
+// 12. Push notification для API 26 (Android 8)
     //https://www.youtube.com/watch?v=m8vUFO5mFIM
     //Doesn't show #signing report in gradle bar for google firebase:
     //https://www.youtube.com/watch?v=Ah1wX26lmxY
