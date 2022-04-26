@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "315185749424",
+    "firebase_url": "https://bettingtips-6cff2.firebaseio.com",
+    "project_id": "bettingtips-6cff2",
+    "storage_bucket": "bettingtips-6cff2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315185749424:android:c339f999a8ddbc42708a75",
+        "android_client_info": {
+          "package_name": "com.appbuilder.u7p87"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315185749424-sfqda1re0pjtu8j4pdmmte6bife7oohf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appbuilder.u7p87",
+            "certificate_hash": "29ba0b591502233482d119ab47f1d0440de02347"
+          }
+        },
+        {
+          "client_id": "315185749424-bmmqvc70q2r6n2l06oihp41gof5eo5td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2r6E1wRNNoK7NTOfpf5uz724TrXeDqNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315185749424-bmmqvc70q2r6n2l06oihp41gof5eo5td.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "315185749424-79natmbapiv5r9der44jb0qavt4ejohc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iloveapps.bettingadvisor",
+                "app_store_id": "1120824768"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
